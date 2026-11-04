@@ -1,0 +1,832 @@
+[
+  {
+    "brand": "Dolce & Gabbana",
+    "type": "Eau de parfum",
+    "familyLabel": "Oriental Floral",
+    "id": "dg-the-one",
+    "name": "The One",
+    "gender": "Her",
+    "family": "Oriental",
+    "price": 16500,
+    "size": "100 ml",
+    "bestseller": true,
+    "featured": true,
+    "description": "A soft, luminous fruity opening evolves into a rich floral heart before settling on an enveloping vanilla and amber base.",
+    "smellsLike": "Elegant, warm and sophisticated.",
+    "notes": {
+      "top": [
+        "Peach",
+        "Lychee",
+        "Mandarin",
+        "Bergamot"
+      ],
+      "heart": [
+        "White lily",
+        "Plum",
+        "Jasmine",
+        "Lily of the valley"
+      ],
+      "base": [
+        "Vanilla",
+        "Amber",
+        "Musk",
+        "Vetiver"
+      ]
+    }
+  },
+  {
+    "brand": "Lancôme",
+    "type": "Eau de parfum",
+    "familyLabel": "Oriental Gourmand / Intense Floral",
+    "id": "lancome-la-nuit-tresor",
+    "name": "La Nuit Trésor",
+    "gender": "Her",
+    "family": "Gourmand",
+    "price": 18900,
+    "size": "100 ml",
+    "bestseller": true,
+    "featured": false,
+    "description": "An intense, fruity gourmand fragrance, marked by the contrast between black rose and vanilla orchid.",
+    "smellsLike": "Sensual, mysterious and captivating.",
+    "notes": {
+      "top": [
+        "Pear",
+        "Bergamot",
+        "Mandarin"
+      ],
+      "heart": [
+        "Black rose",
+        "Vanilla orchid",
+        "Strawberry",
+        "Passion fruit"
+      ],
+      "base": [
+        "Praline",
+        "Incense",
+        "Papyrus",
+        "Lychee",
+        "Patchouli",
+        "Vanilla"
+      ]
+    }
+  },
+  {
+    "brand": "Valentino",
+    "type": "Fragrance",
+    "familyLabel": "Amber Floral",
+    "id": "valentino-born-in-roma-donna-intense",
+    "name": "Born in Roma Donna Intense",
+    "gender": "Her",
+    "family": "Oriental",
+    "price": 17800,
+    "size": "100 ml",
+    "bestseller": false,
+    "featured": false,
+    "description": "A deeper, more bewitching reinterpretation of the classic Born in Roma, carried by intense vanilla and jasmine grandiflorum.",
+    "smellsLike": "Modern, bold and magnetic.",
+    "notes": {
+      "top": [
+        "Bourbon vanilla",
+        "Bergamot"
+      ],
+      "heart": [
+        "Jasmine"
+      ],
+      "base": [
+        "Benzoin",
+        "Amber notes"
+      ]
+    }
+  },
+  {
+    "brand": "Kayali",
+    "type": "Fragrance",
+    "familyLabel": "Oriental Vanilla / Gourmand",
+    "id": "kayali-vanilla-28",
+    "name": "Vanilla | 28",
+    "gender": "Her",
+    "family": "Gourmand",
+    "price": 19500,
+    "size": "100 ml",
+    "bestseller": false,
+    "featured": false,
+    "description": "A rich, liqueur-like and lightly spiced vanilla. Perfect worn alone or layered with other fragrances.",
+    "smellsLike": "Comforting, woody and sweet.",
+    "notes": {
+      "top": [
+        "Vanilla orchid",
+        "Jasmine"
+      ],
+      "heart": [
+        "Brown sugar",
+        "Tonka bean"
+      ],
+      "base": [
+        "Amber",
+        "Amberwood",
+        "Musk",
+        "Patchouli"
+      ]
+    }
+  },
+  {
+    "brand": "Versace",
+    "type": "Fragrance",
+    "familyLabel": "Oriental Floral / Spicy",
+    "id": "versace-crystal-noir",
+    "name": "Crystal Noir",
+    "gender": "Her",
+    "family": "Oriental",
+    "price": 14900,
+    "size": "100 ml",
+    "bestseller": true,
+    "featured": false,
+    "description": "A sumptuous fragrance blending warm spices with a floral heart and a creamy touch of coconut.",
+    "smellsLike": "Bewitching, mysterious and nocturnal.",
+    "notes": {
+      "top": [
+        "Cardamom",
+        "Pepper",
+        "Ginger"
+      ],
+      "heart": [
+        "Coconut",
+        "Gardenia",
+        "Peony",
+        "Orange blossom"
+      ],
+      "base": [
+        "Amber",
+        "Musk",
+        "Sandalwood"
+      ]
+    }
+  },
+  {
+    "brand": "Givenchy",
+    "type": "Eau de parfum",
+    "familyLabel": "Spicy Floral / Woody",
+    "id": "givenchy-linterdit-eau-de-parfum-rouge",
+    "name": "L'Interdit Eau de Parfum Rouge",
+    "gender": "Her",
+    "family": "Floral",
+    "price": 18200,
+    "size": "100 ml",
+    "bestseller": false,
+    "featured": false,
+    "description": "An incandescent red accord where white flowers meet chili pepper and spicy citrus.",
+    "smellsLike": "Incandescent, passionate and bewitching.",
+    "notes": {
+      "top": [
+        "Blood orange",
+        "Ginger"
+      ],
+      "heart": [
+        "Tuberose",
+        "Jasmine",
+        "Chili leaf"
+      ],
+      "base": [
+        "Patchouli",
+        "Sandalwood",
+        "Vetiver"
+      ]
+    }
+  },
+  {
+    "brand": "Jean Paul Gaultier",
+    "type": "Fragrance",
+    "familyLabel": "Floral Gourmand Marine",
+    "id": "jpg-gaultier-divine",
+    "name": "Gaultier Divine",
+    "gender": "Her",
+    "family": "Floral",
+    "price": 16800,
+    "size": "100 ml",
+    "bestseller": false,
+    "featured": false,
+    "description": "An original creation pairing a radiant lily with a salty-sweet meringue note.",
+    "smellsLike": "Sunny, bold and radiant.",
+    "notes": {
+      "top": [
+        "Calypsone",
+        "Bergamot",
+        "Red berries"
+      ],
+      "heart": [
+        "Lily",
+        "Ylang-ylang",
+        "Jasmine"
+      ],
+      "base": [
+        "Meringue",
+        "Patchouli",
+        "Musk"
+      ]
+    }
+  },
+  {
+    "brand": "Yves Saint Laurent",
+    "type": "Eau de parfum",
+    "familyLabel": "Floral Fougère",
+    "id": "ysl-libre",
+    "name": "Libre",
+    "gender": "Her",
+    "family": "Floral",
+    "price": 19200,
+    "size": "100 ml",
+    "bestseller": false,
+    "featured": true,
+    "description": "The duality between the tension of masculine lavender and the feminine sensuality of orange blossom and vanilla. Available as Eau de Parfum and Intense.",
+    "smellsLike": "Bold, chic and assertive.",
+    "notes": {
+      "top": [
+        "Lavender",
+        "Mandarin",
+        "Bergamot"
+      ],
+      "heart": [
+        "Orange blossom",
+        "Jasmine",
+        "Orchid"
+      ],
+      "base": [
+        "Madagascar vanilla",
+        "Ambergris",
+        "Tonka",
+        "Vetiver"
+      ]
+    }
+  },
+  {
+    "brand": "Dior",
+    "type": "Fragrance",
+    "familyLabel": "Fresh Floral",
+    "id": "dior-miss-dior-blooming-bouquet",
+    "name": "Miss Dior Blooming Bouquet",
+    "gender": "Her",
+    "family": "Fresh",
+    "price": 17500,
+    "size": "100 ml",
+    "bestseller": true,
+    "featured": false,
+    "description": "A light, soft floral bouquet that recalls a field of freshly opened flowers.",
+    "smellsLike": "Delicate, romantic and poetic.",
+    "notes": {
+      "top": [
+        "Calabrian bergamot"
+      ],
+      "heart": [
+        "Pink peony",
+        "Damask rose",
+        "Peach",
+        "Apricot"
+      ],
+      "base": [
+        "White musks"
+      ]
+    }
+  },
+  {
+    "brand": "Jean Paul Gaultier",
+    "type": "Eau de parfum",
+    "familyLabel": "Gourmand Chypre",
+    "id": "jpg-scandal",
+    "name": "Scandal",
+    "gender": "Her",
+    "family": "Gourmand",
+    "price": 17900,
+    "size": "100 ml",
+    "bestseller": true,
+    "featured": false,
+    "description": "A very sweet, intense fragrance dominated by an amber honey gourmand note.",
+    "smellsLike": "Gourmand, festive and provocative.",
+    "notes": {
+      "top": [
+        "Blood orange",
+        "Mandarin"
+      ],
+      "heart": [
+        "Honey",
+        "Gardenia",
+        "Orange blossom",
+        "Jasmine",
+        "Peach"
+      ],
+      "base": [
+        "Beeswax",
+        "Caramel",
+        "Patchouli",
+        "Licorice"
+      ]
+    }
+  },
+  {
+    "brand": "Viktor&Rolf",
+    "type": "Fragrance",
+    "familyLabel": "Amber Spicy",
+    "id": "viktor-rolf-spicebomb-extreme",
+    "name": "Spicebomb Extreme",
+    "gender": "Him",
+    "family": "Oriental",
+    "price": 17800,
+    "size": "100 ml",
+    "bestseller": true,
+    "featured": false,
+    "description": "A richer, more intense version of the original Spicebomb, centred on a heavy blend of sweet tobacco and rich vanilla backed by fiery spices.",
+    "smellsLike": "Explosive, warm and seductive. Ideal for cold weather and evening wear.",
+    "notes": {
+      "top": [
+        "Black pepper",
+        "Bergamot"
+      ],
+      "heart": [
+        "Cinnamon",
+        "Cumin",
+        "Saffron"
+      ],
+      "base": [
+        "Bourbon vanilla",
+        "Tobacco",
+        "Amberwood"
+      ]
+    }
+  },
+  {
+    "brand": "Givenchy",
+    "type": "Eau de parfum",
+    "familyLabel": "Woody Floral Amber",
+    "id": "givenchy-gentleman-reserve-privee",
+    "name": "Gentleman Réserve Privée",
+    "gender": "Him",
+    "family": "Woody",
+    "price": 18500,
+    "size": "100 ml",
+    "bestseller": false,
+    "featured": true,
+    "description": "Combines Givenchy's signature powdery iris note with a rich, warm whisky accord and toasted chestnut.",
+    "smellsLike": "Sophisticated, smooth and boozy, inspired by whisky tasting.",
+    "notes": {
+      "top": [
+        "Bergamot"
+      ],
+      "heart": [
+        "Iris",
+        "Chestnut"
+      ],
+      "base": [
+        "Whisky absolute",
+        "Amber",
+        "Sandalwood"
+      ]
+    }
+  },
+  {
+    "brand": "Jean Paul Gaultier",
+    "type": "Fragrance",
+    "familyLabel": "Amber Woody / Tropical",
+    "id": "jpg-le-beau-le-parfum",
+    "name": "Le Beau Le Parfum",
+    "gender": "Him",
+    "family": "Woody",
+    "price": 18200,
+    "size": "100 ml",
+    "bestseller": false,
+    "featured": false,
+    "description": "Takes the original tropical coconut-and-tonka DNA of Le Beau and adds a sweet pineapple opening with deep woody-amber undertones.",
+    "smellsLike": "Exotic, intense and sensual.",
+    "notes": {
+      "top": [
+        "Pineapple",
+        "Iris",
+        "Ginger"
+      ],
+      "heart": [
+        "Coconut",
+        "Wood accord"
+      ],
+      "base": [
+        "Tonka bean",
+        "Amber",
+        "Sandalwood"
+      ]
+    }
+  },
+  {
+    "brand": "Versace",
+    "type": "Eau de toilette / Eau de parfum",
+    "familyLabel": "Aromatic Fougère",
+    "id": "versace-eros",
+    "name": "Eros",
+    "gender": "Him",
+    "family": "Fresh",
+    "price": 14500,
+    "size": "100 ml",
+    "bestseller": false,
+    "featured": false,
+    "description": "Opens with a crisp, sweet blast of mint and apple before drying down into a warm vanilla and tonka base.",
+    "smellsLike": "Youthful, energetic and loud. A classic nightlife staple.",
+    "notes": {
+      "top": [
+        "Mint leaves",
+        "Green apple",
+        "Italian lemon"
+      ],
+      "heart": [
+        "Tonka bean",
+        "Ambrosan",
+        "Geranium"
+      ],
+      "base": [
+        "Madagascar vanilla",
+        "Cedarwood",
+        "Vetiver",
+        "Oakmoss"
+      ]
+    }
+  },
+  {
+    "brand": "Chanel",
+    "type": "Eau de parfum",
+    "familyLabel": "Woody Aromatic",
+    "id": "chanel-bleu-de-chanel",
+    "name": "Bleu de Chanel",
+    "gender": "Him",
+    "family": "Woody",
+    "price": 21500,
+    "size": "100 ml",
+    "bestseller": true,
+    "featured": true,
+    "description": "Features a clean citrus opening balanced by smoky incense, amber and smooth sandalwood, making it suitable for any occasion.",
+    "smellsLike": "Versatile, refined and effortlessly timeless.",
+    "notes": {
+      "top": [
+        "Grapefruit",
+        "Lemon",
+        "Mint",
+        "Pink pepper"
+      ],
+      "heart": [
+        "Ginger",
+        "Nutmeg",
+        "Jasmine"
+      ],
+      "base": [
+        "Incense",
+        "Vetiver",
+        "Cedar",
+        "Sandalwood",
+        "Amber"
+      ]
+    }
+  },
+  {
+    "brand": "Dior",
+    "type": "Eau de parfum",
+    "familyLabel": "Citrus Aromatic / Spicy",
+    "id": "dior-sauvage",
+    "name": "Sauvage",
+    "gender": "Him",
+    "family": "Citrus",
+    "price": 20500,
+    "size": "100 ml",
+    "bestseller": true,
+    "featured": true,
+    "description": "Combines the crisp, radiant freshness of bergamot with warm oriental spices and a smooth vanilla-ambroxan trail.",
+    "smellsLike": "Bold, fresh and magnetic.",
+    "notes": {
+      "top": [
+        "Calabrian bergamot",
+        "Pepper"
+      ],
+      "heart": [
+        "Sichuan pepper",
+        "Lavender",
+        "Star anise",
+        "Nutmeg"
+      ],
+      "base": [
+        "Ambroxan",
+        "Vanilla"
+      ]
+    }
+  },
+  {
+    "brand": "Emporio Armani",
+    "type": "Fragrance",
+    "familyLabel": "Amber Fougère / Gourmand",
+    "id": "armani-stronger-with-you-intensely",
+    "name": "Stronger With You Intensely",
+    "gender": "Him",
+    "family": "Gourmand",
+    "price": 17200,
+    "size": "100 ml",
+    "bestseller": false,
+    "featured": false,
+    "description": "Known for its signature gooey toffee accord mixed with spicy cinnamon and a heavy vanilla-amber base.",
+    "smellsLike": "Ultra-sweet, cozy and inviting.",
+    "notes": {
+      "top": [
+        "Pink pepper",
+        "Juniper",
+        "Violet"
+      ],
+      "heart": [
+        "Toffee",
+        "Cinnamon",
+        "Lavender",
+        "Sage"
+      ],
+      "base": [
+        "Vanilla",
+        "Tonka bean",
+        "Amber",
+        "Suede"
+      ]
+    }
+  },
+  {
+    "brand": "Jean Paul Gaultier",
+    "type": "Fragrance",
+    "familyLabel": "Amber Woody Gourmand",
+    "id": "jpg-scandal-pour-homme-le-parfum",
+    "name": "Scandal Pour Homme Le Parfum",
+    "gender": "Him",
+    "family": "Gourmand",
+    "price": 18600,
+    "size": "100 ml",
+    "bestseller": false,
+    "featured": false,
+    "description": "Built around an intense caramel and tonka sweetness with a woody backbone, designed for maximum projection and durability.",
+    "smellsLike": "Sweet, bold and theatrical.",
+    "notes": {
+      "top": [
+        "Geranium"
+      ],
+      "heart": [
+        "Tonka bean"
+      ],
+      "base": [
+        "Sandalwood",
+        "Caramel"
+      ]
+    }
+  },
+  {
+    "brand": "Carolina Herrera",
+    "type": "Eau de parfum électrique",
+    "familyLabel": "Woody Aromatic Fruity",
+    "id": "carolina-herrera-bad-boy-cobalt",
+    "name": "Bad Boy Cobalt",
+    "gender": "Him",
+    "family": "Woody",
+    "price": 17400,
+    "size": "100 ml",
+    "bestseller": false,
+    "featured": false,
+    "description": "A fresh take on the Bad Boy line featuring a unique juicy dark plum note contrasted with aromatic lavender and earthy truffle.",
+    "smellsLike": "Fresh, modern and energetic.",
+    "notes": {
+      "top": [
+        "Pink pepper",
+        "Lavender"
+      ],
+      "heart": [
+        "Plum",
+        "Geranium"
+      ],
+      "base": [
+        "Truffle accord",
+        "Vetiver",
+        "Cedarwood"
+      ]
+    }
+  },
+  {
+    "brand": "Paco Rabanne",
+    "type": "Eau de toilette",
+    "familyLabel": "Amber Spicy Gourmand",
+    "id": "paco-rabanne-1-million",
+    "name": "1 Million",
+    "gender": "Him",
+    "family": "Oriental",
+    "price": 15800,
+    "size": "100 ml",
+    "bestseller": true,
+    "featured": false,
+    "description": "A clubbing staple dominated by blood orange, warm cinnamon and an amber-leather finish.",
+    "smellsLike": "Flamboyant, sweet and confident.",
+    "notes": {
+      "top": [
+        "Blood mandarin",
+        "Grapefruit",
+        "Mint"
+      ],
+      "heart": [
+        "Cinnamon",
+        "Spicy notes",
+        "Rose"
+      ],
+      "base": [
+        "Amber",
+        "Leather",
+        "Woody notes",
+        "Indian patchouli"
+      ]
+    }
+  },
+  {
+    "brand": "Khadlaj",
+    "type": "Fragrance",
+    "familyLabel": "Floral Fruity Gourmand / Citrus Woody",
+    "id": "khadlaj-karus-gold-absolu",
+    "name": "Karus Gold Absolu",
+    "gender": "Unisex",
+    "family": "Gourmand",
+    "price": 9500,
+    "size": "100 ml",
+    "bestseller": false,
+    "featured": false,
+    "description": "Opens with a sugared, tart citrus blast that blends into a soft, powdery floral-praline heart before settling on a clean, earthy vetiver and musk drydown. Highly versatile.",
+    "smellsLike": "Bright, sweet and clean. Often compared to the Bal d'Afrique profile by Byredo, at a friendlier price.",
+    "notes": {
+      "top": [
+        "Candied lemon",
+        "Blackcurrant",
+        "Bergamot"
+      ],
+      "heart": [
+        "Praline",
+        "Magnolia",
+        "Violet"
+      ],
+      "base": [
+        "Musk",
+        "Vetiver"
+      ]
+    }
+  },
+  {
+    "brand": "Xerjoff",
+    "type": "Fragrance",
+    "familyLabel": "Aromatic Green Citrus",
+    "id": "xerjoff-torino21",
+    "name": "Torino21",
+    "gender": "Unisex",
+    "family": "Citrus",
+    "price": 38000,
+    "size": "100 ml",
+    "bestseller": false,
+    "featured": false,
+    "description": "A masterclass in fresh green perfumery, with crisp garden mint and lemon balanced by aromatic basil and rosemary. Excellent longevity for a fresh summer fragrance.",
+    "smellsLike": "Ultra-fresh, uplifting and invigorating. Created to celebrate the Nitto ATP Tennis Finals in Turin.",
+    "notes": {
+      "top": [
+        "Mint",
+        "Lemon",
+        "Bergamot",
+        "Thyme"
+      ],
+      "heart": [
+        "Basil",
+        "Rosemary",
+        "Blackcurrant",
+        "Jasmine"
+      ],
+      "base": [
+        "Verbena",
+        "Musk"
+      ]
+    }
+  },
+  {
+    "brand": "Yves Saint Laurent",
+    "type": "Fragrance",
+    "familyLabel": "Amber Spicy / Leather",
+    "id": "ysl-babycat",
+    "name": "Babycat",
+    "gender": "Unisex",
+    "family": "Oriental",
+    "price": 22500,
+    "size": "100 ml",
+    "bestseller": false,
+    "featured": false,
+    "description": "From Le Vestiaire des Parfums. Built around the contrast between dark, resinous incense, smooth suede and a rich, creamy Bourbon vanilla base.",
+    "smellsLike": "Smoky, chic and addictive. A highly sought-after cult favorite.",
+    "notes": {
+      "top": [
+        "Pink pepper",
+        "Black pepper",
+        "Elemi"
+      ],
+      "heart": [
+        "Olibanum (frankincense)",
+        "Saffron"
+      ],
+      "base": [
+        "Bourbon vanilla",
+        "Suede accord",
+        "Cedarwood"
+      ]
+    }
+  },
+  {
+    "brand": "Kilian Paris",
+    "type": "Fragrance",
+    "familyLabel": "Amber Vanilla Gourmand",
+    "id": "kilian-black-phantom-memento-mori",
+    "name": "Black Phantom Memento Mori",
+    "gender": "Unisex",
+    "family": "Gourmand",
+    "price": 48000,
+    "size": "100 ml",
+    "bestseller": false,
+    "featured": false,
+    "description": "A pirate-inspired fragrance that smells of dark spiced rum mixed with freshly roasted espresso, melted dark chocolate and warm sandalwood.",
+    "smellsLike": "Dark, decadent and unapologetically boozy.",
+    "notes": {
+      "top": [
+        "Dark chocolate",
+        "Rum"
+      ],
+      "heart": [
+        "Coffee",
+        "Sugarcane"
+      ],
+      "base": [
+        "Almond",
+        "Caramel",
+        "Sandalwood",
+        "Heliotrope"
+      ]
+    }
+  },
+  {
+    "brand": "Xerjoff",
+    "type": "Fragrance",
+    "familyLabel": "Aromatic Spicy / Sweet Tobacco",
+    "id": "xerjoff-naxos",
+    "name": "Naxos",
+    "gender": "Unisex",
+    "family": "Oriental",
+    "price": 36000,
+    "size": "100 ml",
+    "bestseller": false,
+    "featured": false,
+    "description": "From the XJ 1861 collection. Blends bright Mediterranean citrus and soothing lavender with golden honey, warm cinnamon and smooth blonde tobacco. Extremely long-lasting, with strong projection.",
+    "smellsLike": "Regal, warm and opulent. A homage to Sicily.",
+    "notes": {
+      "top": [
+        "Lavender",
+        "Bergamot",
+        "Lemon"
+      ],
+      "heart": [
+        "Honey",
+        "Cinnamon",
+        "Cashmeran",
+        "Jasmine"
+      ],
+      "base": [
+        "Tobacco leaf",
+        "Tonka bean",
+        "Vanilla"
+      ]
+    }
+  },
+  {
+    "brand": "Giorgio Armani",
+    "type": "Eau de parfum",
+    "familyLabel": "Aquatic Aromatic",
+    "id": "armani-acqua-di-gio-profondo",
+    "name": "Acqua Di Giò Profondo",
+    "gender": "Unisex",
+    "family": "Fresh",
+    "price": 19800,
+    "size": "100 ml",
+    "bestseller": false,
+    "featured": false,
+    "description": "Takes the signature Acqua Di Giò marine identity into deeper waters, combining icy marine notes with dark green herbs and salty minerals. Perfect for warm weather and daily wear.",
+    "smellsLike": "Deep, ocean-fresh and modern.",
+    "notes": {
+      "top": [
+        "Marine notes",
+        "Aquozone",
+        "Green mandarin",
+        "Bergamot"
+      ],
+      "heart": [
+        "Rosemary",
+        "Lavender",
+        "Cypress",
+        "Mastic"
+      ],
+      "base": [
+        "Mineral accord",
+        "Patchouli",
+        "Musk",
+        "Amber"
+      ]
+    }
+  }
+]
