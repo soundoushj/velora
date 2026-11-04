@@ -1,0 +1,86 @@
+/* ==========================================================================
+   VELORA — mobile layer (loaded last, only changes phones / small tablets)
+   ========================================================================== */
+
+@media (max-width: 760px) {
+  :root { --nav-h: 60px; }
+  html { -webkit-tap-highlight-color: transparent; }
+  body { font-size: 15.5px; }
+  input, select, textarea { font-size: 16px; } /* stops iOS zoom on focus */
+
+  .container { width: calc(100% - 2rem); }
+  .container.narrow { width: calc(100% - 2rem); }
+  h2 { font-size: clamp(1.8rem, 8vw, 2.3rem); }
+
+  /* Navbar */
+  .nav-inner { height: var(--nav-h); width: calc(100% - 1.25rem); }
+  .nav-logo img { height: 40px; }
+  .nav-actions { gap: 0; }
+  .nav-actions a, .nav-burger { width: 42px; height: 42px; }
+  .badge { top: 3px; right: 1px; }
+  /* backdrop-filter on the header would trap the fixed drawer inside it: switch it off */
+  .nav, .nav.solid { -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .nav.solid { background: var(--ivory); }
+  .drawer { position: fixed; inset: var(--nav-h) 0 auto 0; height: calc(100vh - var(--nav-h)); height: calc(100dvh - var(--nav-h)); background: var(--ivory); z-index: 99; }
+  .drawer nav { min-height: 100%; }
+  .drawer { padding: 1.25rem 1.25rem calc(2rem + env(safe-area-inset-bottom, 0px)); }
+  .drawer a { font-size: 1.7rem; padding: .85rem 0; }
+
+  /* Hero: simple, centred, typographic (no media on phones) */
+  .hero { flex-direction: column; align-items: stretch; justify-content: center; min-height: 100svh; padding: calc(var(--nav-h) + 1.5rem) 0 3rem; background: linear-gradient(180deg, var(--mist) 0%, var(--blush) 100%); }
+  .hero-media { display: none; }
+  .hero-content { padding: 0; margin: 0 auto; text-align: center; }
+  .hero-content > * { margin-inline: auto; max-width: 30rem; }
+  .hero .lead { margin-inline: auto; }
+  .hero-cta { flex-direction: column; align-items: center; gap: 1rem; }
+  .hero-cta .btn:not(.btn-outline) { width: 100%; max-width: 20rem; flex: none; }
+  .hero-tag { padding-left: 0; }
+
+  /* Sections */
+  .section { padding: 3.5rem 0; }
+  .section-tight-top { padding-top: 3.5rem; }
+  .section-band { padding: 3rem 0; }
+  .section-head { margin-bottom: 1.75rem; }
+  .mt { margin-top: 1.75rem; }
+
+  /* Collections: swipeable row */
+  .cat-grid { display: flex; grid-template-columns: none; justify-content: flex-start; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; margin-inline: -1rem; padding: .5rem 1rem 1.4rem; scroll-padding-inline: 1rem; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .cat-grid::-webkit-scrollbar { display: none; }
+  .cat-card { flex: 0 0 min(72vw, 280px); scroll-snap-align: center; }
+
+  /* Product grid: two tidy columns */
+  .pgrid, .pgrid.cols-3, .pgrid.cols-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); justify-content: stretch; gap: 1.5rem .75rem; }
+  .pgrid.cols-3 > .pcard:last-child:nth-child(odd) { grid-column: 1 / -1; width: calc(50% - .375rem); justify-self: center; }
+  .pcard-overlay, .pcard-top, .pcard-smells, .pcard-rule, .pcard-notes, .pcard-vol { display: none; }
+  .pcard-body { padding: .85rem .6rem 1rem; text-align: center; align-items: stretch; }
+  .pcard-brandline { text-align: center; font-size: .54rem; letter-spacing: .2em; margin-bottom: .15rem; min-height: 0; }
+  .pcard-name { font-size: 1.12rem; line-height: 1.15; margin-bottom: .5rem; }
+  .pcard-foot { flex-direction: column; align-items: center; justify-content: center; gap: 0; margin: 0 0 .75rem; }
+  .pcard-foot .price { font-size: 1rem; }
+  .pcard-add { min-height: 44px; padding: .55rem .4rem; font-size: .6rem; letter-spacing: .14em; gap: .4rem; }
+  .pcard-add::after { display: none; }
+  .pcard-badge { font-size: .5rem; padding: .25rem .5rem; }
+  .heart { width: 34px; height: 34px; }
+
+  /* Story hero image: full width, not pushed right */
+  .story-hero .split-media.tall { width: 100%; justify-self: stretch; aspect-ratio: 4 / 3.6; }
+
+  /* Philosophy band */
+  .phil .split-media { min-height: 320px; }
+  .phil .frame { margin: -2.5rem .75rem 0; padding: 2.25rem 1.5rem; }
+  .frame::before { inset: 10px; }
+
+  /* Newsletter + footer */
+  .nl-form { flex-direction: column; align-items: stretch; gap: .8rem; width: 100%; max-width: 26rem; }
+  .nl-form input { flex: none; width: 100%; height: 56px; min-height: 56px; }
+  .nl-form .btn { width: 100%; flex: none; }
+  .newsletter { padding: 4rem 0; }
+  .newsletter h2 { font-size: clamp(2rem, 9vw, 2.6rem); }
+  .footer { padding-top: 3.5rem; }
+}
+
+@media (max-width: 380px) {
+  .nav-actions a, .nav-burger { width: 38px; height: 38px; }
+  .pcard-name { font-size: 1.02rem; }
+  .pcard-add { font-size: .56rem; letter-spacing: .1em; }
+}
