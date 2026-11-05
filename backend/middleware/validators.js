@@ -1,6 +1,5 @@
 const { body, param, query } = require('express-validator');
 const { GENDERS, FAMILIES } = require('../models/Product');
-const { passwordProblem } = require('../utils/password');
 
 // ---------- helpers ----------
 const SLUG_REGEX = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -18,29 +17,11 @@ const text = (field, { min = 1, max = 200, label = field } = {}) =>
 
 const optionalIf = (chain, optional) => (optional ? chain.optional({ values: 'undefined' }) : chain);
 
-// ---------- auth ----------
-const registerRules = [
-  text('name', { min: 2, max: 60, label: 'Name' }),
-  body('email')
-    .isString().withMessage('Email must be text.').bail()
-    .trim().toLowerCase()
-    .isEmail().withMessage('Email is not valid.')
-    .isLength({ max: 254 }),
-  body('password')
-    .isString().withMessage('Password must be text.').bail()
-    .custom((v) => {
-      const problem = passwordProblem(v);
-      if (problem) throw new Error(problem);
-      return true;
-    }),
-];
-
 const loginRules = [
   body('email').isString().withMessage('Email is required.').bail().trim().toLowerCase().isEmail().withMessage('Email is not valid.'),
   body('password').isString().withMessage('Password is required.').bail().isLength({ min: 1, max: 128 }).withMessage('Password is required.'),
 ];
 
-const exchangeRules = [body('code').isString().withMessage('Code is required.').bail().isLength({ min: 10, max: 200 }).withMessage('Code is invalid.')];
 
 // ---------- products ----------
 const imageUrlCheck = (v) => {
@@ -106,15 +87,14 @@ const productListRules = [
   query('limit').optional().isInt({ min: 1, max: 100 }).withMessage('limit must be between 1 and 100.'),
 ];
 
-const userListRules = [
+const customerListRules = [
   query('search').optional().isString().withMessage('search must be text.').bail().isLength({ max: 100 }),
-  query('role').optional().isIn(['customer', 'admin']).withMessage('Invalid role.'),
   query('page').optional().isInt({ min: 1, max: 100000 }),
   query('limit').optional().isInt({ min: 1, max: 100 }),
 ];
 
 module.exports = {
-  registerRules, loginRules, exchangeRules,
+  loginRules,
   createProductRules: productRules(false), updateProductRules: productRules(true),
-  stockRules, mongoIdParam, idOrSlugParam, productListRules, userListRules,
+  stockRules, mongoIdParam, idOrSlugParam, productListRules, customerListRules,
 };

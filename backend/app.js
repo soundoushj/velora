@@ -2,7 +2,6 @@ const path = require('path');
 const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
-const cookieParser = require('cookie-parser');
 const { config } = require('./config');
 const createLimiters = require('./middleware/rateLimiters');
 const sanitize = require('./middleware/sanitize');
@@ -54,7 +53,6 @@ function createApp({ rateLimit = config.rateLimit } = {}) {
   );
 
   app.use(express.json({ limit: '10kb' }));
-  app.use(cookieParser());
   app.use(sanitize);
 
   // ---- Separate administration dashboard (static files, protected by the API it calls) ----
@@ -66,6 +64,7 @@ function createApp({ rateLimit = config.rateLimit } = {}) {
   app.get('/api/health', (_req, res) => res.json({ success: true, status: 'ok', time: new Date().toISOString(), frontendUrl: config.frontendUrl }));
   app.use('/api/auth', require('./routes/authRoutes')(limiters));
   app.use('/api/products', require('./routes/productRoutes'));
+  app.use('/api/orders', require('./routes/orderRoutes')(limiters));
   app.use('/api/admin', require('./routes/adminRoutes'));
 
   app.use(notFound);

@@ -4,6 +4,7 @@ const { connectDB } = require('./config/db');
 const { createApp } = require('./app');
 require('./models/User');
 require('./models/Product');
+require('./models/Order');
 
 async function start() {
   try {
@@ -22,7 +23,6 @@ async function start() {
     process.exit(1);
   }
 
-  if (!config.googleEnabled) console.warn('Note: Google sign-in is disabled (GOOGLE_CLIENT_ID / GOOGLE_CLIENT_SECRET not set).');
 
   const server = createApp().listen(config.port, () => {
     console.log(`Velora API  ->  http://localhost:${config.port}/api/health`);

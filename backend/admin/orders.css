@@ -1,0 +1,24 @@
+/* Velora administration — Orders section (uses the variables defined in admin.css). */
+.dialog-wide { width: min(860px, calc(100vw - 2rem)); }
+.order-detail { padding: 1.4rem 1.6rem 1.4rem; overflow-y: auto; max-height: calc(100vh - 2rem); }
+.order-detail .dialog-head { align-items: flex-start; }
+.order-detail .dialog-head p { margin: .2rem 0 0; }
+.order-detail .head-right { display: flex; align-items: center; gap: .4rem; }
+.order-detail h3 { margin: 1.4rem 0 .6rem; }
+.order-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 2rem; }
+.order-cols h3 { margin-top: 1rem; }
+.kvs { margin: 0; }
+.kv { display: grid; grid-template-columns: 110px 1fr; gap: .6rem; padding: .4rem 0; border-bottom: 1px solid var(--line); }
+.kv dt { color: var(--rose-gray); font-size: .85rem; }
+.kv dd { margin: 0; overflow-wrap: anywhere; }
+.items-table { min-width: 520px; }
+.items-table .name { font-weight: 500; }
+.items-table .sub { font-size: .78rem; }
+.totals { margin: 1rem 0 0 auto; max-width: 320px; }
+.totals div { display: flex; justify-content: space-between; padding: .35rem 0; }
+.totals dt, .totals dd { margin: 0; }
+.totals .grand { border-top: 1px solid var(--line); margin-top: .3rem; padding-top: .7rem; font-weight: 600; font-size: 1.1rem; }
+.status-box { background: var(--mist); border: 1px solid var(--line); padding: .2rem 1.2rem 1.2rem; margin-top: 1.4rem; }
+.status-edit { display: flex; flex-wrap: wrap; gap: .7rem; align-items: center; }
+.status-edit select { width: auto; min-width: 180px; }
+@media (max-width: 900px) { .order-cols { grid-template-columns: 1fr; } .kv { grid-template-columns: 90px 1fr; } }

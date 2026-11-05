@@ -22,7 +22,7 @@ module.exports = function createLimiters(rl) {
     apiLimiter: build({ windowMs: rl.windowMs, max: rl.apiMax, message: 'Too many requests. Please try again later.' }),
     // Login: 5 requests / 15 minutes per IP (brute-force protection)
     loginLimiter: build({ windowMs: rl.windowMs, max: rl.loginMax, message: 'Too many login attempts. Please try again in 15 minutes.' }),
-    // Registration + OAuth code exchange (stops mass account creation)
-    authLimiter: build({ windowMs: rl.windowMs, max: rl.authMax, message: 'Too many attempts. Please try again later.' }),
+    // Public order creation: 10 orders / 15 minutes per IP (falls back to 10 if a caller does not pass orderMax)
+    orderLimiter: build({ windowMs: rl.windowMs, max: rl.orderMax || 10, message: 'Too many order attempts. Please try again in a few minutes.' }),
   };
 };

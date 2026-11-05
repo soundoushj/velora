@@ -13,8 +13,6 @@ import ProductDetails from './pages/ProductDetails';
 import CheckoutDemo from './pages/CheckoutDemo';
 import Info from './pages/Info';
 import NotFound from './pages/NotFound';
-import Account from './pages/Account';
-import AuthCallback from './pages/AuthCallback';
 
 export default function App() {
   const { pathname } = useLocation();
@@ -33,8 +31,6 @@ export default function App() {
           <Route path="/search" element={<Search />} />
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/checkout" element={<CheckoutDemo />} />
-          <Route path="/account" element={<Account />} />
-          <Route path="/auth/callback" element={<AuthCallback />} />
           <Route path="/info/:slug" element={<Info />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
