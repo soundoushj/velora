@@ -1,14 +1,5 @@
-/* Account page + data-loading states (new). Uses the existing Velora tokens. */
-.acc-card { max-width: 460px; margin: 0 auto; padding: 2rem 1.8rem; background: #fff; border: 1px solid rgba(55, 7, 25, .12); }
-.acc-card .co-form h2 { display: none; }
-.acc-tabs { display: grid; grid-template-columns: 1fr 1fr; margin-bottom: 1.4rem; border-bottom: 1px solid rgba(55, 7, 25, .15); }
-.acc-tabs button { padding: .8rem; font-size: .76rem; letter-spacing: .16em; text-transform: uppercase; color: var(--rose-gray); border-bottom: 2px solid transparent; margin-bottom: -1px; }
-.acc-tabs button[aria-selected='true'] { color: var(--burgundy); border-bottom-color: var(--berry); }
-.acc-error { background: #fdecef; border-left: 3px solid #b0103f; color: #6d0a1f; padding: .7rem .9rem; font-size: .9rem; }
-.acc-or { display: flex; align-items: center; gap: 1rem; color: var(--rose-gray); font-size: .8rem; margin: 1.2rem 0 .4rem; }
-.acc-or::before, .acc-or::after { content: ''; flex: 1; height: 1px; background: rgba(55, 7, 25, .15); }
+/* Loading / error states used by DataGate (shown while products load from the API). */
 .data-state { text-align: center; padding-block: 4rem; color: var(--rose-gray); }
 .data-state h2 { color: var(--ink); }
 .spinner { display: inline-block; width: 28px; height: 28px; border: 2px solid var(--blush); border-top-color: var(--berry); border-radius: 50%; animation: spin .9s linear infinite; margin-bottom: .8rem; }
 @keyframes spin { to { transform: rotate(360deg); } }
-.nav-actions a[aria-label='Account'] { display: inline-flex; }

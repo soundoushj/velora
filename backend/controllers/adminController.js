@@ -1,5 +1,5 @@
 const asyncHandler = require('../utils/asyncHandler');
-const User = require('../models/User');
+const Order = require('../models/Order');
 const Product = require('../models/Product');
 const { config } = require('../config');
 
@@ -8,10 +8,9 @@ const escapeRegex = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 // GET /api/admin/stats
 exports.stats = asyncHandler(async (_req, res) => {
   const low = config.lowStockThreshold;
-  const [totalProducts, totalUsers, admins, byGender, byFamily, inv, outOfStock, lowStock, lowStockItems] = await Promise.all([
+  const [totalProducts, customerPhones, byGender, byFamily, inv, outOfStock, lowStock, lowStockItems] = await Promise.all([
     Product.countDocuments(),
-    User.countDocuments(),
-    User.countDocuments({ role: 'admin' }),
+    Order.distinct('customer.phone'), // a customer is identified by phone number
     Product.aggregate([{ $group: { _id: '$gender', count: { $sum: 1 } } }]),
     Product.aggregate([{ $group: { _id: '$family', count: { $sum: 1 } } }]),
     Product.find().select('stock price'), // small catalogue: summing in JS keeps this simple and portable
@@ -27,9 +26,7 @@ exports.stats = asyncHandler(async (_req, res) => {
     success: true,
     data: {
       totalProducts,
-      totalUsers,
-      customers: totalUsers - admins,
-      admins,
+      totalCustomers: customerPhones.length,
       inventory: { totalUnits, inventoryValue, outOfStock, lowStock, lowStockThreshold: low, lowStockItems },
       byGender: toMap(byGender),
       byFamily: toMap(byFamily),
@@ -37,19 +34,43 @@ exports.stats = asyncHandler(async (_req, res) => {
   });
 });
 
-// GET /api/admin/users   (password hashes are never selected, and are stripped from JSON anyway)
-exports.listUsers = asyncHandler(async (req, res) => {
-  const filter = {};
-  if (req.query.role) filter.role = req.query.role;
-  if (req.query.search && req.query.search.trim()) {
-    const rx = new RegExp(escapeRegex(req.query.search.trim()), 'i');
-    filter.$or = [{ name: rx }, { email: rx }];
-  }
+// GET /api/admin/customers
+// Velora has no customer accounts: customers are guests, so this list is built from the orders.
+// Orders are grouped by phone number (already normalised when the order is saved). The name, city and
+// address shown are the ones from the customer's most recent order.
+exports.listCustomers = asyncHandler(async (req, res) => {
   const page = parseInt(req.query.page, 10) || 1;
   const limit = parseInt(req.query.limit, 10) || 20;
-  const [data, total] = await Promise.all([
-    User.find(filter).sort({ createdAt: -1 }).skip((page - 1) * limit).limit(limit),
-    User.countDocuments(filter),
+
+  const after = {};
+  const term = (req.query.search || '').trim();
+  if (term) {
+    const rx = new RegExp(escapeRegex(term), 'i');
+    const or = [{ fullName: rx }, { city: rx }, { _id: rx }];
+    const compact = term.replace(/[\s().-]/g, ''); // "0550 12 34 56" also finds "0550123456"
+    if (compact && compact !== term) or.push({ _id: new RegExp(escapeRegex(compact), 'i') });
+    after.$or = or;
+  }
+
+  const [out] = await Order.aggregate([
+    { $sort: { createdAt: -1, _id: -1 } }, // newest first, so $first below means "most recent order"
+    {
+      $group: {
+        _id: '$customer.phone',
+        fullName: { $first: '$customer.fullName' },
+        city: { $first: '$customer.city' },
+        address: { $first: '$customer.address' },
+        ordersCount: { $sum: 1 },
+        totalSpent: { $sum: { $cond: [{ $eq: ['$status', 'cancelled'] }, 0, '$total'] } },
+        lastOrderAt: { $first: '$createdAt' },
+      },
+    },
+    { $match: after },
+    { $sort: { lastOrderAt: -1, _id: 1 } },
+    { $facet: { rows: [{ $skip: (page - 1) * limit }, { $limit: limit }], count: [{ $count: 'n' }] } },
   ]);
+
+  const total = out.count.length ? out.count[0].n : 0;
+  const data = out.rows.map(({ _id, ...rest }) => ({ phone: _id, ...rest }));
   res.json({ success: true, total, page, pages: Math.max(1, Math.ceil(total / limit)), count: data.length, data });
 });

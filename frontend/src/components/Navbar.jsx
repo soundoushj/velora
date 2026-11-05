@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Heart, Menu, Search, ShoppingBag, User, X } from 'lucide-react';
+import { Heart, Menu, Search, ShoppingBag, X } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
 
 const LINKS = [
@@ -50,7 +50,6 @@ export default function Navbar() {
         </nav>
         <div className="nav-actions">
           <Link to="/search" aria-label="Search"><Search size={20} /></Link>
-          <Link to="/account" aria-label="Account"><User size={20} /></Link>
           <Link to="/favorites" className="nav-count-wrap" aria-label={`Favorites, ${favorites.length} saved`}>
             <Heart size={20} />{favorites.length > 0 && <span className="badge" key={favorites.length}>{favorites.length}</span>}
           </Link>
@@ -68,7 +67,6 @@ export default function Navbar() {
             <Link key={l.key} to={l.to} tabIndex={open ? 0 : -1} className={current === l.key ? 'active' : ''}>{l.label}</Link>
           ))}
           <Link to="/search" tabIndex={open ? 0 : -1}>Search</Link>
-          <Link to="/account" tabIndex={open ? 0 : -1}>Account</Link>
         </nav>
       </div>
     </header>

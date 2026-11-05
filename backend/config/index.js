@@ -9,6 +9,11 @@ const int = (value, fallback) => {
   const n = parseInt(value, 10);
   return Number.isFinite(n) && n > 0 ? n : fallback;
 };
+// Like int(), but 0 is allowed (e.g. a delivery fee of 0).
+const nonNegInt = (value, fallback) => {
+  const n = parseInt(value, 10);
+  return Number.isFinite(n) && n >= 0 ? n : fallback;
+};
 const list = (value, fallback) =>
   value ? value.split(',').map((s) => s.trim().replace(/\/$/, '')).filter(Boolean) : fallback;
 
@@ -37,24 +42,24 @@ const config = {
 
   bcryptRounds: int(process.env.BCRYPT_ROUNDS, 12),
 
-  google: {
-    clientId: process.env.GOOGLE_CLIENT_ID,
-    clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    redirectUri: process.env.GOOGLE_REDIRECT_URI || `${backendUrl}/api/auth/google/callback`,
-  },
-
   // Rate limits required by the assignment: 100 req / 15 min (API) and 5 req / 15 min (login).
   rateLimit: {
     windowMs: int(process.env.RATE_LIMIT_WINDOW_MINUTES, 15) * 60 * 1000,
     apiMax: int(process.env.API_RATE_LIMIT_MAX, 100),
     loginMax: int(process.env.LOGIN_RATE_LIMIT_MAX, 5),
-    authMax: int(process.env.AUTH_RATE_LIMIT_MAX, 20), // register + OAuth code exchange
+    orderMax: int(process.env.ORDER_RATE_LIMIT_MAX, 10), // public order creation: 10 / 15 min / IP
+  },
+
+  // Delivery pricing. The BACKEND decides the delivery fee (the shop only displays it).
+  // Defaults match the values the React shop already shows (600 DZD, free from 20 000 DZD).
+  delivery: {
+    fee: nonNegInt(process.env.DELIVERY_FEE, 600),
+    freeThreshold: nonNegInt(process.env.FREE_DELIVERY_THRESHOLD, 20000),
   },
 
   lowStockThreshold: int(process.env.LOW_STOCK_THRESHOLD, 5),
 };
 
-config.googleEnabled = Boolean(config.google.clientId && config.google.clientSecret);
 
 /** Called once at start-up so the server refuses to run with a broken or unsafe setup. */
 function validateConfig() {
